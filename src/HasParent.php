@@ -64,7 +64,7 @@ trait HasParent
      */
     public function getForeignKey(): string
     {
-        return Str::snake(class_basename($this->getParentClass())) . '_' . $this->primaryKey;
+        return Str::snake(class_basename($this->getParentClass())) . '_' . $this->getKeyName();
     }
 
     /**
